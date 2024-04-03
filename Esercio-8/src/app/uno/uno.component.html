@@ -1,0 +1,132 @@
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<div class="sfondo">
+<h1>LA CALABRIA</h1>
+
+<p style="color: black;">La Calabria ufficialmente Regione Calabria, è una regione italiana a statuto ordinario dell'Italia meridionale di 1 838 150 abitanti, con capoluogo Catanzaro. L'unico confine regionale si trova a nord, con la Basilicata, a sud-ovest lo stretto di Messina, la separa dalla Sicilia, ed è bagnata a est dal mar Ionio e a ovest dal mar Tirreno.</p>
+
+
+
+
+
+<div *ngIf="!(luoghi[0].controllo || luoghi[1].controllo || luoghi[2].controllo || luoghi[3].controllo || luoghi[4].controllo); then thenBlock1 else elseBlock"></div>
+
+<ng-template #thenBlock1>
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let element of luoghi; let i = index" class="col-md-4">
+        <div class="card mb-4">
+          <img class="card-img-top" src="https://images.emojiterra.com/google/android-12l/512px/2753.png" alt="Card image">
+          <div class="card-body">
+            <h4 class="card-title">SCOPRI LA CITTA</h4>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary" (click)="bottone(element)">See Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #elseBlock>
+  <div *ngIf="luoghi[0].controllo; then thenBlock2 else elseBlock2"></div>
+
+  <ng-template #thenBlock2>
+    <div class="container" style="width: 400px;">
+    <div class="card mb-5">
+        <h1>CATANZARO</h1>
+      <img class="card-img-top" src="https://cs-stage.altrama.com/images/3523/cz-duomo-%281%29.jpg" alt="Card image">
+      <div class="card-body">
+        <h4 style=" color: red;"  class="card-title">Catanzaro</h4>
+        <p  style=" color: red;"  class="card-text">Nazione:Italia</p>
+        <P  style=" color: red;"  class="car-text">Catanzaro è un comune italiano di 84 115 abitanti, capoluogo della Calabria.
+
+            Storico capoluogo della Calabria Ultra per oltre due secoli[6], Catanzaro è sede dell'università "Magna Græcia". Alle sue porte sorgeva Skylletion, antica città della Magna Grecia poi trasformata in colonia romana.</P>
+        <p  style=" color: red;"  class="card-text">habitat: I Tepig non si trovano facilmente, tuttavia può darsi che vivano nelle zone vicine al fuoco.</p>
+        <button type="button" class="btn"  (click)="indietro()">Torna alla home</button>
+      </div>
+    </div>    
+  </div>     
+  </ng-template>
+
+  <ng-template #elseBlock2>
+    <div *ngIf="luoghi[1].controllo; then thenBlock3 else elseBlock3"></div>
+
+    <ng-template #thenBlock3>
+      <div class="container" style="width: 400px;">
+      <div class="card mb-5">
+        <img class="card-img-top" src="https://www.turismo.it/typo3temp/pics/0530ac3f7a.jpg" alt="Card image">
+        <div class="card-body">
+          <h4 style=" color:black;"   class="card-title">Pizzo Calabro</h4>
+          <p  style=" color: black;"  class="card-text">Nazione:Italia</p>
+          <p   style=" color: lightblue;">Pizzo (impropriamente chiamato anche Pizzo Calabro, U Pìzzu in calabrese) è un comune italiano di 8 712 abitanti della provincia di Vibo Valentia in Calabria. Si trova sulla Costa degli Dei. Il borgo è conosciuto per la produzione del tartufo di Pizzo e per la storica tradizione gelatiera, tanto da essere chiamato "la città del gelato".]</p>
+          <p  style=" color: lightblue;"  class="card-text">habitat:I pochi esemplari di Oshawott selvatici vivono prevalentemente in acqua, ma si trovano a loro agio anche sulla terraferma.</p>
+          <button type="button" class="btn"  (click)="indietro()">Torna alla home</button>
+        </div>
+      </div>  
+    </div>       
+    </ng-template>
+
+    <ng-template #elseBlock3>
+      <div *ngIf="luoghi[2].controllo; then thenBlock4 else elseBlock4"></div>
+
+      <ng-template #thenBlock4>
+        <div class="container" style="width: 400px;">
+        <div class="card mb-5">
+          <img class="card-img-top" src="https://turismo.reggiocal.it/sites/default/files/2020-07/Hero_Grotteria.jpg" alt="Card image">
+          <div class="card-body">
+            <h4 style="color: lightgreen;"    class="card-title">GROTTERIA</h4>
+            <p style=" color: lightgreen;"  class="card-text">Nazione:Italia</p>
+            <P style=" color: lightgreen;"> descrizione: Snivy è un Pokémon di tipo Erba introdotto in quinta generazione.Si evolve in Servine a partire dal livello 17 e quindi in Serperior a partire dal livello 36.</P>
+            <P style=" color: lightgreen;"> habitat: Gli Snivy non si trovano facilmente. I pochi esemplari vivono nelle foreste e nei luoghi erbosi.</P>
+            <button type="button" class="btn"  (click)="indietro()">Torna alla home</button>
+          </div>
+        </div>    
+      </div>           
+      </ng-template>
+
+      <ng-template #elseBlock4>
+        <div *ngIf="luoghi[3].controllo; then thenBlock5 else elseBlock5"></div>
+
+        <ng-template #thenBlock5>
+          <div class="container" style="width: 400px;">
+          <div class="card mb-5">
+            <img class="card-img-top" src="https://mediaim.expedia.com/destination/1/3478afab649e13c21a45311d83e1fb55.jpg" alt="Card image">
+            <div class="card-body">
+              <h4 style=" color: red;"   class="card-title">ROCCELLA</h4>
+              <p  style=" color: red;"  class="card-text">Nazione:Italia</p>
+              <p  style=" color: red;"  class="card-text">descrizione: Chimchar è un Pokémon di tipo Fuoco introdotto in quarta generazione.Si evolve in Monferno a partire dal livello 14 e quindi in Infernape a partire dal livello 36.</p>
+              <p  style=" color: red;"  class="card-text">habitat: Chimachar è un Pokémon molto raro più presente in cattività che in natura dove nidifica su rupi e montagne rocciose.</p>
+              <button type="button" class="btn"  (click)="indietro()">Torna alla home</button>
+            </div>
+          </div>     
+        </div>            
+        </ng-template>
+
+        <ng-template #elseBlock5>
+          <div *ngIf="luoghi[4].controllo; then thenBlock6  elseBlock6"></div>
+
+          <ng-template #thenBlock6>
+            <div class="container" style="width: 400px;">
+            <div class="card mb-5">
+              <img class="card-img-top" src="https://tourismmedia.italia.it/is/image/mitur/image7-246?wid=850&hei=500&fit=constrain,1&fmt=webp" alt="Card image">
+              <div class="card-body">
+                <h4 style=" color: lightblue;" class="card-title">COSENZA</h4>
+                <p  style=" color: lightblue;"  class="card-text">Nazione:Italia</p>
+                <p  style=" color: lightblue;"  class="card-text">descrizione: Piplup è un Pokémon di tipo Acqua introdotto in quarta generazione.Si evolve in Prinplup a partire dal livello 16 e quindi in Empoleon a partire dal livello 36.</p>
+                <p  style=" color: lightblue;"  class="card-text">habitat: I Piplup vivono sulle rive dei mari nei climi più freddi. Nonostante siano abbastanza rari vengono utilizzati come Pokémon iniziale dal Professor Rowan, che li affida ai giovani allenatori della regione di Sinnoh.</p>
+                <button type="button" class="btn"  (click)="indietro()">Torna alla home</button>
+              </div>
+            </div>       
+          </div>  
+          </ng-template>
+        </ng-template>
+      </ng-template>
+    </ng-template>
+  </ng-template>
+</ng-template>
+</div>
+
